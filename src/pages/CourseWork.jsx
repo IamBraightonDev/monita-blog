@@ -15,7 +15,7 @@ import monitaSes3Img2 from '../assets/ses3/monita-ses3-2.jpg';
 import monitaSes4Img1 from '../assets/ses4/monita-ses4-1.jpg';
 import monitaSes4Img2 from '../assets/ses4/monita-ses4-2.jpg';
 
-import monitaSes5 from '../assets/videos/monita-ses5.mp4';
+import monitaSes5 from '../assets/ses5/monita-ses5.mp4';
 
 import monitaSes6Img1 from '../assets/ses6/monita-ses6-1.jpg';
 import monitaSes6Img2 from '../assets/ses6/monita-ses6-2.jpg';
