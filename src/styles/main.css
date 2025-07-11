@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f1ea; /* beige moderno */
+  color: #222;
+}
+
+/* ────── NAVBAR ────── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #d3c3f4;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.navbar nav a.active {
+  border-bottom: 2px solid #6e44ff;
+  padding-bottom: 4px;
+}
+
+.navbar .social-icons img {
+  width: 20px;
+  margin-left: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.navbar .social-icons img:hover {
+  filter: none;
+}
+
+/* ────── CONTENIDO GENERAL ────── */
+.main-content {
+  max-width: 100%;
+  width: 100%;
+  padding: 0rem 7rem;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #6e44ff;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #cdbaff;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: #6e44ff;
+  margin: 2rem 0 1rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #cdbaff;
+  font-weight: 500;
+}
+
+/* ────── HOME: presentación ────── */
+.home-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.monita-img {
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  flex: 1;
+  text-align: justify; /* ✅ AÑADIR ESTO */
+}
+
+
+/* ────── GALERÍA CON LIGHTBOX ────── */
+.galeria {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.galeria-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  break-inside: avoid;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria-img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.15);
+}
+
+/* ────── BLOG GENERAL ────── */
+.blog-card {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-card img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-info {
+  max-width: 500px;
+}
+
+.author {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.blog-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-summary {
+  color: #555;
+}
+
+/* ────── RESPONSIVE ────── */
+@media (max-width: 1000px) {
+  .galeria {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    column-count: 1;
+  }
+
+  .main-content {
+    padding: 0rem 2rem;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .monita-img {
+    max-width: 100%;
+  }
+}

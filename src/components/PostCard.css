@@ -1,0 +1,31 @@
+.blog-card {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-card img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-info {
+  max-width: 500px;
+}
+
+.author {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.blog-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-summary {
+  color: #555;
+}
