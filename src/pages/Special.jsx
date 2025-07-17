@@ -5,6 +5,7 @@ import monitaEspecial4 from '../assets/special/monita-especial4.jpg';
 import monitaEspecial5 from '../assets/special/monita-especial5.jpg';
 import monitaEspecial6 from '../assets/special/monita-especial6.jpg';
 import monitaEspecial7 from '../assets/special/monita-especial7.jpg';
+import monitaEspecial8 from '../assets/special/monita-especial8.jpg';
 
 export default function Special() {
   const trabajos = [
@@ -36,6 +37,10 @@ export default function Special() {
       img: monitaEspecial7,
       texto: "Alondra y Aghatta hicieron una parada en una venta de salchipapas, pidieron algo de comer y se sentaron en el parque a esperar que les despacharan, en eso vieron que se reflejaban en el piso. Tomémonos una foto, dijo Aghatta. Se estaban tomando la foto cuando escucharon a lo lejos una voz como de 56 años gritando: ¡Aghatta, Aghatta!. Vio el reflejo del piso pero este parecía desvanecerse poco a poco."
     },
+    {
+      img: monitaEspecial8,
+      texto: "¡Aghatta, Despierta!. La había estado llamando la profesora de educación física. Resulta que se había quedado dormida y todo había sido un pequeño sueño que había tenido, donde recordaba una salida que tuvo antes de que sus tíos la enviaran al internado en el que se encontraba luego de que hubiera fallecido su papá."
+    }
   ];
 
   return (

@@ -27,6 +27,18 @@ import monitaGusto6 from '../assets/inicio/monita-gusto6.jpg';
 import monitaGusto7 from '../assets/inicio/monita-gusto7.jpg';
 import monitaGusto8 from '../assets/inicio/monita-gusto8.jpg';
 import monitaGusto9 from '../assets/inicio/monita-gusto9.jpg';
+import monitaGusto10 from '../assets/inicio/monita-gusto10.jpg';
+import monitaGusto11 from '../assets/inicio/monita-gusto11.jpg';
+import monitaGusto12 from '../assets/inicio/monita-gusto12.jpg';
+import monitaRegalos1 from '../assets/inicio/monita-regalos1.jpg';
+import monitaRegalos2 from '../assets/inicio/monita-regalos2.jpg';
+import monitaRegalos3 from '../assets/inicio/monita-regalos3.jpg';
+import monito1 from '../assets/inicio/monito1.jpg';
+import monito2 from '../assets/inicio/monito2.jpg';
+import monito3 from '../assets/inicio/monito3.jpg';
+import monito4 from '../assets/inicio/monito4.png';
+import monito5 from '../assets/inicio/monito5.jpg';
+import monito6 from '../assets/inicio/monito6.jpg';
 
 export default function Home() {
   const [activeImage, setActiveImage] = useState(null);
@@ -163,6 +175,48 @@ export default function Home() {
         <h3 className="section-title">Canciones que me transportan a otra dimensión</h3>
         <div className="galeria">
           {[monitaGusto7, monitaGusto8, monitaGusto9].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Inicio ${i + 1}`}
+              className="galeria-img"
+              onClick={() => openImage(img)}
+              style={{ cursor: 'pointer' }}
+            />
+          ))}
+        </div>
+
+        <h3 className="section-title">Animal favorito</h3>
+        <div className="galeria">
+          {[monito1, monito2, monito3, monito4, monito5, monito6].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Inicio ${i + 1}`}
+              className="galeria-img"
+              onClick={() => openImage(img)}
+              style={{ cursor: 'pointer' }}
+            />
+          ))}
+        </div>
+
+        <h3 className="section-title">Libros favoritos</h3>
+        <div className="galeria">
+          {[monitaGusto10, monitaGusto11, monitaGusto12].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Inicio ${i + 1}`}
+              className="galeria-img"
+              onClick={() => openImage(img)}
+              style={{ cursor: 'pointer' }}
+            />
+          ))}
+        </div>
+
+        <h3 className="section-title">Regalos favoritos</h3>
+        <div className="galeria">
+          {[monitaRegalos1, monitaRegalos2, monitaRegalos3].map((img, i) => (
             <img
               key={i}
               src={img}
