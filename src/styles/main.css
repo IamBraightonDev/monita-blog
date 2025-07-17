@@ -1,9 +1,15 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f1ea; /* beige moderno */
+  font-family: 'Indie Flower', cursive;
+  /* background: #f4f1ea; */ /* ❌ eliminamos el color sólido */
+  background-image: url('https://marketplace.canva.com/EAFK1e9anu8/1/0/566w/canva-poster-figuras-femenino-blanco-DzTzzkQza1s.jpg');
+  background-size: cover;         /* ✅ ajusta la imagen al tamaño de pantalla */
+  background-position: center;    /* ✅ centra la imagen */
+  background-repeat: no-repeat;   /* ✅ evita que se repita */
+  background-attachment: fixed;   /* ✅ efecto parallax sutil */
   color: #222;
 }
+
 
 /* ────── NAVBAR ────── */
 .navbar {
@@ -11,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 2px solid #d3c3f4;
+  border-bottom: 2px solid rgba(208, 128, 68, 1);;
   position: sticky;
   top: 0;
   background-color: white;
@@ -31,7 +37,7 @@ body {
 }
 
 .navbar nav a.active {
-  border-bottom: 2px solid #6e44ff;
+  border-bottom: 2px solid rgba(208, 128, 68, 1);
   padding-bottom: 4px;
 }
 
@@ -54,21 +60,39 @@ body {
   box-sizing: border-box;
 }
 
+.text-center-wrapper {
+  text-align: center;
+}
+
+.section-title-pro {
+  font-size: 4rem;
+  color: rgba(208, 128, 68, 1);
+  margin-bottom: 1.5rem;
+  padding-left: 2.4rem;
+  padding-right: 2.6rem;
+  border-left: 4px solid rgba(208, 128, 68, 1);
+  border-right: 4px solid rgba(208, 128, 68, 1);
+  font-weight: 600;
+  text-align: center;
+  display: inline-block; /* o inline-block */
+  margin: 0 auto;
+}
+
 .section-title {
-  font-size: 2rem;
-  color: #6e44ff;
+  font-size: 3rem;
+  color: rgba(208, 128, 68, 1);
   margin-bottom: 1.5rem;
   padding-left: 0.5rem;
-  border-left: 4px solid #cdbaff;
+  border-left: 4px solid rgba(208, 128, 68, 1);;
   font-weight: 600;
 }
 
 .section-subtitle {
-  font-size: 1.3rem;
-  color: #6e44ff;
+  font-size: 2.7rem;
+  color: rgba(208, 128, 68, 1);
   margin: 2rem 0 1rem;
   padding-left: 0.5rem;
-  border-left: 3px solid #cdbaff;
+  border-left: 3px solid rgba(208, 128, 68, 1);;
   font-weight: 500;
 }
 
@@ -77,45 +101,52 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
+  align-items: center;         /* ✅ centra verticalmente */
+  justify-content: center;     /* ✅ centra horizontalmente si sobra espacio */
   margin-bottom: 2rem;
+  min-height: 300px;           /* ✅ asegura altura mínima para alinear contenido */
 }
 
 .monita-img {
-  max-width: 360px;
+  max-width: 750px;
   height: auto;
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   flex-shrink: 0;
 }
 
 .intro-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
+  font-size: 2.6rem;
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.8;
+  color: #000;
   flex: 1;
-  text-align: justify; /* ✅ AÑADIR ESTO */
+  text-align: justify;
+  display: flex;
+  align-items: center;       /* ✅ centra verticalmente dentro de su bloque */
 }
 
 
 /* ────── GALERÍA CON LIGHTBOX ────── */
 .galeria {
   column-count: 3;
-  column-gap: 1.5rem;
-  padding: 1rem 0;
+  column-gap: 0.8rem;  /* 👈 Espacio más ajustado entre columnas */
+  padding: 0.5rem 0;
 }
 
 .galeria-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;            /* se ajusta al ancho de la columna */
+  height: auto;           /* mantiene proporción */
+  margin-bottom: 0.8rem;  /* 👈 menos separación inferior */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   break-inside: avoid;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
+  object-fit: cover;      /* ✅ buen recorte visual, más elegante */
   cursor: pointer;
 }
+
 
 .galeria-img:hover {
   transform: scale(1.03);
@@ -199,5 +230,17 @@ body {
 
   .monita-img {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-text {
+    font-size: 1.6rem;
+    text-align: justify;
   }
 }

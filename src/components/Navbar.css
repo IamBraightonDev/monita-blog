@@ -13,29 +13,34 @@
 
 .navbar .logo {
   font-weight: bold;
-  font-size: 1.4rem;
-  color: #6e44ff;
-  letter-spacing: 1px;
+  font-size: 2rem !important;
+  color: rgba(208, 128, 68, 1);
+  letter-spacing: 1.5px;
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.2;
+  display: inline-block;
 }
 
+
 .navbar nav a {
-  margin: 0 0.8rem;
+  margin: 0 1rem;
   text-decoration: none;
   color: #444;
-  font-weight: 500;
-  padding: 0.3rem 0;
+  font-weight: 600;
+  font-size: 2rem; /* 🔁 aumentado el tamaño del texto */
+  padding: 0.4rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar nav a:hover {
-  color: #6e44ff;
-  border-color: #cdbaff;
+  color: rgba(208, 128, 68, 1);
+  border-color: rgba(208, 128, 68, 1);
 }
 
 .navbar nav a.active {
-  color: #6e44ff;
-  border-color: #6e44ff;
+  color: rgba(208, 128, 68, 1);
+  border-color: rgba(208, 128, 68, 1);
 }
 
 .navbar .social-icons img {
